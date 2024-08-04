@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import {NextUIProvider} from "@nextui-org/react";
 
 const font = Rubik({ subsets: ["latin"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <NextUIProvider>{children}</NextUIProvider>
+      </body>
     </html>
   );
 }
