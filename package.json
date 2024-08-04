@@ -2,6 +2,10 @@
   "name": "pamer",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "hendra@usa.com",
+    "name": "Hendra Dwi Saputra"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
