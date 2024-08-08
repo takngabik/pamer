@@ -1,5 +1,38 @@
+import Link from "next/link";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/react";
+
 export function Banner() {
   return (
-    <><p>Banner</p></>
+    <section className="flex flex-col h-screen">
+      <Navbar position="static">
+        <NavbarBrand></NavbarBrand>
+        <NavbarContent justify="center">
+          <NavbarItem>
+            <Link href="/" className="uppercase hover:underline hover:font-bold">
+              Portfolio
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="/" className="uppercase hover:underline hover:font-bold">
+              About
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="/" className="uppercase hover:underline hover:font-bold">
+              Contact
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+        <NavbarContent></NavbarContent>
+      </Navbar>
+      <main className="m-auto h-1/5">
+        <span className="flex flex-col items-center">
+          <h1 className="text-3xl font-bold uppercase">Hendra Application</h1>
+          <p className="text-xs font-normal -m-2">
+            jasa layanan pengembangan website dan mobile application
+          </p>
+        </span>
+      </main>
+    </section>
   );
 }
