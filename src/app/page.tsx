@@ -1,9 +1,17 @@
-export default function Beranda() {
+import {About} from "@/components/layout/About";
+import {Banner} from "@/components/layout/Banner";
+import {Portfolio} from "@/components/layout/Portfolio";
+import {Contact} from "@/components/layout/Contact";
+import {Footer} from "@/components/layout/Footer";
+
+export default function LandingPage() {
   return (
-    <main className="flex h-screen">
-      <div className="m-auto">
-        <h1 className="text-3xl font-extrabold">Hendra Portfolio</h1>
-      </div>
-    </main>
+    <>
+      <Banner />
+      <Portfolio />
+      <About />
+      <Contact />
+      <Footer />
+    </>
   );
 }
