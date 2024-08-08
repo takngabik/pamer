@@ -1,5 +1,6 @@
 import React from "react";
 import {NextUIProvider} from "@nextui-org/react";
+import {ThemeProvider} from "next-themes";
 import type {Metadata} from "next";
 import {Rubik} from "next/font/google";
 import "./globals.css";
@@ -15,7 +16,11 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
   return (
     <html lang="en">
       <body className={font.className}>
-        <NextUIProvider>{children}</NextUIProvider>
+        <NextUIProvider>
+          <ThemeProvider attribute="class" defaultTheme="light">
+            {children}
+          </ThemeProvider>
+        </NextUIProvider>
       </body>
     </html>
   );
