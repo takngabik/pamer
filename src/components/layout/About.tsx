@@ -1,6 +1,6 @@
 "use client"
 
-import {Listbox, ListboxItem} from "@nextui-org/react";
+import {Divider, Progress} from "@nextui-org/react";
 
 export function About() {
   return (
@@ -9,22 +9,56 @@ export function About() {
         <h1 className="text-xl font-semibold uppercase text-center mb-4 tracking-wider">
           About Me
         </h1>
-        <div className="flex justify-center items-center">
-          <span className="w-2/3 text-center mb-2">
-            Freelancer dengan keahlian dalam pengembangan website dan aplikasi
-            mobile yang mewujudkan ide menjadi sebuah solusi berbasis digital.
+        <span className="w-full flex flex-row justify-center">
+          <Divider className="mb-2 w-10/12"/>
+        </span>
+        <div className="flex justify-center items-center mb-2">
+          <span className="w-4/5 text-center mb-2">
+            Freelancer berpengalaman dengan keahlian dalam pengembangan website
+            dan aplikasi mobile yang mewujudkan ide menjadi sebuah solusi
+            berbasis teknologi digital
           </span>
         </div>
-        <span className="w-full flex flex-row justify-between gap-4">
-          <div className="w-5/12 flex justify-center">
-            <Listbox>
-              <ListboxItem key={"1"}>1</ListboxItem>
-            </Listbox>
+        <div className="w-full flex flex-row justify-center gap-16">
+          <div className="w-4/12 flex flex-col justify-end gap-2 text-left">
+            <h1 className="font-semibold uppercase">Website Development</h1>
+            <span>
+              <h1>Typescript</h1>
+              <Progress size="sm" value={80} color="secondary"/>
+            </span>
+            <span>
+              <h1>Next.js Framework</h1>
+              <Progress size="sm" value={70} color="success"/>
+            </span>
+            <span>
+              <h1>Tailwind CSS</h1>
+              <Progress size="sm" value={80} color="warning"/>
+            </span>
+            <span>
+              <h1>Prisma ORM</h1>
+              <Progress size="sm" value={60} color="danger"/>
+            </span>
           </div>
-          <div className="w-5/12 flex justify-center">
-            <p>2</p>
+          <div className="w-4/12 flex flex-col justify-start gap-2 text-left">
+            <h1 className="font-semibold uppercase">Mobile Application</h1>
+            <span>
+              <h1>Kotlin</h1>
+              <Progress size="sm" value={75} color="warning"/>
+            </span>
+            <span>
+              <h1>Android Native</h1>
+              <Progress size="sm" value={70} color="secondary"/>
+            </span>
+            <span>
+              <h1>XML Design</h1>
+              <Progress size="sm" value={60} color="danger"/>
+            </span>
+            <span>
+              <h1>Room Database</h1>
+              <Progress size="sm" value={65} color="success"/>
+            </span>
           </div>
-        </span>
+        </div>
       </div>
     </section>
   );
