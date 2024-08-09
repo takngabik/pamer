@@ -3,8 +3,8 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/react"
 
 export function Banner() {
   return (
-    <section className="flex flex-col h-screen">
-      <Navbar position="static">
+    <section className="flex flex-col h-screen bg-[#1BBD9C] text-white">
+      <Navbar position="static" className="bg-[#2D3F50]">
         <NavbarBrand></NavbarBrand>
         <NavbarContent justify="center">
           <NavbarItem>

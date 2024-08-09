@@ -1,10 +1,16 @@
 "use client"
 
 import {Divider, Progress} from "@nextui-org/react";
+import {useTheme} from "next-themes";
+import {useEffect} from "react";
 
 export function About() {
+  const {setTheme} = useTheme()
+  useEffect(() => {
+    setTheme("light")
+  }, []);
   return (
-    <section className="flex flex-row w-full justify-center py-8">
+    <section className="flex flex-row w-full justify-center py-8 bg-[#1BBD9C] text-white">
       <div className="w-3/5">
         <h1 className="text-xl font-semibold uppercase text-center mb-4 tracking-wider">
           About Me
@@ -28,7 +34,7 @@ export function About() {
             </span>
             <span>
               <h1>Next.js Framework</h1>
-              <Progress size="sm" value={70} color="success"/>
+              <Progress size="sm" value={70} color="primary"/>
             </span>
             <span>
               <h1>Tailwind CSS</h1>
@@ -55,7 +61,7 @@ export function About() {
             </span>
             <span>
               <h1>Room Database</h1>
-              <Progress size="sm" value={65} color="success"/>
+              <Progress size="sm" value={65} color="primary"/>
             </span>
           </div>
         </div>
