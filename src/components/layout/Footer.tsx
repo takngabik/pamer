@@ -3,7 +3,7 @@ import {FiAtSign, FiGithub} from "react-icons/fi";
 
 export function Footer() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col mt-16">
       <div className="flex flex-row justify-center bg-[#2d3f50]">
         <div className="w-4/12 text-white p-4 text-center">
           <h1 className="text-lg font-semibold mb-1 uppercase">Location</h1>
